@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 
-
 const Home = (props) => {
   const items = props.shelfActions.populate().item;
 
@@ -28,9 +27,6 @@ const Home = (props) => {
     <div className="container-fluid">
       <div className="row">
         <Navbar />
-        {/*<div className="col-sm-12">
-          <h1 className="header">Gallery</h1>
-        </div>*/}
         <ul className="list">
           {shelfItems}
         </ul>
