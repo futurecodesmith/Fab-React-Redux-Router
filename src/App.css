@@ -72,6 +72,14 @@ nav li {
   display: inline;
 }
 
+.block {
+  display: block;
+}
+
+.center {
+  text-align: center;
+}
+
 .left-align {
   text-align: left;
 }
@@ -87,9 +95,22 @@ nav li {
 .overflow-scroll {
   overflow: scroll;
 }
+
+.columns-2 {
+  column-count: 2;
+  column-gap: 60px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: lightgrey;
+}
 /*--------------------------------------------------------*/
 
 .header {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.h3-header {
   margin-top: 0;
 }
 
@@ -142,7 +163,23 @@ nav li {
 
 
 
+/*-------------Login------------------*/
 
+.form {
+  margin-top: 60px;
+}
 
+.input {
+  margin: 10px auto;
+  width: 400px;
+  font-size: 1em;
+  padding: 15px 0;
+}
+
+.input-button {
+  background-color: #F47474;
+  color: white;
+  width: 400px;
+}
 
 

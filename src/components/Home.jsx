@@ -33,7 +33,7 @@ const Home = (props) => {
               className="inline float-left img-responsive padding-right-1"
               src={item.src}
               alt={item.name} />
-            <h3 className="left-align header">{item.name}</h3>
+            <h3 className="left-align h3-header">{item.name}</h3>
             <p className="justify">{item.description}</p>
           </div>
         </div>

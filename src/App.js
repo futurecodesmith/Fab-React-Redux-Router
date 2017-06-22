@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Cart from './components/Cart';
+import Login from './components/Login';
 import Home from './components/Home';
-import About from './components/About';
+import Community from './components/Community';
 import NotFound from './components/NotFound';
 
 
@@ -13,8 +13,8 @@ class App extends Component {
       <Router>
           <Switch>
             <Route exact={true} path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/cart" component={Cart} />
+            <Route path="/community" component={Community} />
+            <Route path="/login" component={Login} />
             <Route component={NotFound} />
           </Switch>
       </Router>
