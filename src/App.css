@@ -41,23 +41,6 @@ nav li {
 }
 
 
-@media (min-width: 700px) {
-  .link {
-    font-size: 1.5em;
-  }
-  .link-right {
-    margin-left: 70px;
-  }
-
-  .link-left {
-    margin-left: 40px;
-  }
-
-  .logo {
-    height: 70px;
-    width: auto;
-  }
-}
 /*--------------------------------------------------------*/
 
 .float-left {
@@ -97,11 +80,7 @@ nav li {
 }
 
 .columns-2 {
-  column-count: 2;
-  column-gap: 60px;
-  column-rule-style: solid;
-  column-rule-width: 1px;
-  column-rule-color: lightgrey;
+  column-count: 1;
 }
 /*--------------------------------------------------------*/
 
@@ -136,7 +115,6 @@ nav li {
   height: 400px;
 }
 
-
 .grow { 
   transition: all .2s ease-in-out; 
 }
@@ -149,7 +127,6 @@ nav li {
   height: 150px;
   width: auto;
 }
-
 
 .list-bottom {
   padding: 0;
@@ -186,16 +163,16 @@ nav li {
 }
 
 .input {
-  margin: 10px auto;
-  width: 400px;
+  margin: 5px auto;
+  width: 300px;
   font-size: 1em;
-  padding: 15px 0;
+  padding: 7px 0;
 }
 
 .input-button {
   background-color: #F47474;
   color: white;
-  width: 400px;
+  width: 300px;
 }
 
 /*------------------------animation ---------------------------*/
@@ -231,36 +208,41 @@ nav li {
 
 /*----------------------------------------------*/
 
-.background-enter {
-  transform: translate(100%);
-}
-.background-enter.background-enter-active {
-  transform: translate(0%);
-  transition: transform 1000ms ease-in-out;
-}
-.background-leave {
-  transform: translate(0%);
-}
-.background-leave.background-leave-active {
-  transform: translate(-100%);
-  transition: transform 1000ms ease-in-out;
-}
 
 
-/*.example-enter {
-  opacity: 0.01;
-}
+@media (min-width: 700px) {
+  .link {
+    font-size: 1.5em;
+  }
+  .link-right {
+    margin-left: 70px;
+  }
 
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 700ms ease-in;
-}
+  .link-left {
+    margin-left: 40px;
+  }
 
-.example-leave {
-  opacity: 1;
-}
+  .logo {
+    height: 70px;
+    width: auto;
+  }
 
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 700ms ease-in;
-}*/
+  .columns-2 {
+    column-count: 2;
+    column-gap: 60px;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    column-rule-color: lightgrey;
+  }
+
+  .input {
+    margin: 10px auto;
+    width: 400px;
+    font-size: 1em;
+    padding: 15px 0;
+  }
+
+  .input-button {
+    width: 400px;
+  }
+}
