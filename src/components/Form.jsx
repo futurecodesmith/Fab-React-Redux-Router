@@ -4,7 +4,7 @@ class Form extends Component {
 
   handleSubmit(e){
     e.preventDefault();
-
+    console.log(this.refs.name.value, this.refs.password.value)
     this.refs.name.value = '';
     this.refs.password.value = '';
 

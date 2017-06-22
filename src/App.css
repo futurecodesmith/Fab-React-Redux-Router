@@ -114,6 +114,10 @@ nav li {
   margin-top: 0;
 }
 
+.h1-header {
+  margin-bottom: 30px;
+}
+
 .list-top {
   text-align: center;
   list-style-type: none;
@@ -182,4 +186,19 @@ nav li {
   width: 400px;
 }
 
+/*------------------------animation ---------------------------*/
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn .5s ease-in 1 forwards;
+}
+
+.is-paused {
+  animation-play-state: start;
+}

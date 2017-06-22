@@ -1,9 +1,5 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import * as CartActions from '../actions/cartAction';
-import * as ShelfActions from '../actions/shelfAction';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import Form from './Form';
 
 const Login = (props) => {
@@ -23,18 +19,4 @@ const Login = (props) => {
 }
 
 
-function mapStateToProps(state, prop) {
-  return {
-    cart: state.cart
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    cartActions: bindActionCreators(CartActions, dispatch),
-    shelfActions: bindActionCreators(ShelfActions, dispatch)
-  }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default Login;

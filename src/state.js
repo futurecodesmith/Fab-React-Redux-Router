@@ -80,7 +80,7 @@ module.exports = {
       },
       {
         src: "https://unsplash.it/300?image=27",
-        name: "Mountaintop Experience",
+        name: "Wonder Abroad",
         description: "Lorem ipsum dolor sit amet elit. Aspernatur nemo voluptatibus eius error magnam tempora! Fuga deleniti in, impedit ad a aspernatur molestiae sit, odio eligendi veritatis sequi natus libero non dolores facere facilis corporis ut doloremque. Eveniet laboriosam totam, illum iste et animi, esse neque, illo fugiat. Consequuntur facilis iusto veniam impedit ad sit non corporis ut doloremque. Eveniet laboriosam incidunt reprehenderit sunt.",
         id: Math.floor(Math.random() * 1000)
       },

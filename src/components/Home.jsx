@@ -1,19 +1,25 @@
 import React from 'react';
 import Navbar from './Navbar';
-import * as CartActions from '../actions/cartAction';
 import * as ShelfActions from '../actions/shelfAction';
-import * as TopThreeActions from '../actions/topThreeAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 
 const Home = (props) => {
 
-  const thumbnails = props.cart.map((item, i) => {
+  function startFade(){
+    let li = document.querySelectorAll('li');
+    li.forEach(l => {
+      l.classList.remove('fade-in');
+      l.classList.className ='fade-in';
+    })
+  }
+
+  const thumbnails = props.shelf.map((item, i) => {
     return (
       <li
-        onClick={props.shelfActions.addToCart.bind(this, item)}
-        key={i} className="col-xs-3 col-sm-2 col-md-1 list-item-small">
+        onClick={(e) => {props.shelfActions.addToCart(item); startFade()}}
+        key={i} className="col-xs-3 col-sm-2 col-md-1 list-item-small fade-in is-paused">
         <img
           className="img img-responsive"
           src={item.src}
@@ -23,7 +29,7 @@ const Home = (props) => {
   })
 
 
-  const topThree = props.cart.slice(0,3).map((item, i) => {
+  const topThree = props.shelf.slice(0,3).map((item, i) => {
     return (
       <li
         key={i} className="col-sm-4 list-item-big">
@@ -62,15 +68,13 @@ const Home = (props) => {
 
 function mapStateToProps(state, prop) {
   return {
-    cart: state.shelf
+    shelf: state.shelf
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    cartActions: bindActionCreators(CartActions, dispatch),
     shelfActions: bindActionCreators(ShelfActions, dispatch),
-    topThreeActions: bindActionCreators(TopThreeActions, dispatch)
   }
 }
 
