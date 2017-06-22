@@ -105,6 +105,10 @@ nav li {
 }
 /*--------------------------------------------------------*/
 
+.top {
+  margin-top: 60px;
+}
+
 .header {
   text-align: center;
   margin-top: 60px;
@@ -200,5 +204,19 @@ nav li {
 }
 
 .is-paused {
-  animation-play-state: start;
+  animation-play-state: paused;
+}
+
+.is-running {
+  animation-play-state: running;
+}
+
+@keyframes move {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.move {
+  animation-name: move;
+  animation-duration: 3s;
 }
