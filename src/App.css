@@ -17,22 +17,22 @@ nav li {
 }
 
 .logo {
-  height: 70px;
+  height: 40px;
   width: auto;
 }
 
 .link {
-  font-size: 1.5em;
+  font-size: .8em;
   color: black;
   text-transform: uppercase;
 }
 
 .link-right {
-  margin-left: 70px;
+  margin-left: 20px;
 }
 
 .link-left {
-  margin-left: 40px;
+  margin-left: 10px;
 }
 
 .link:hover {
@@ -40,6 +40,24 @@ nav li {
   color: #F47474;
 }
 
+
+@media (min-width: 700px) {
+  .link {
+    font-size: 1.5em;
+  }
+  .link-right {
+    margin-left: 70px;
+  }
+
+  .link-left {
+    margin-left: 40px;
+  }
+
+  .logo {
+    height: 70px;
+    width: auto;
+  }
+}
 /*--------------------------------------------------------*/
 
 .float-left {
@@ -66,6 +84,9 @@ nav li {
   text-align: justify;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
 /*--------------------------------------------------------*/
 
 .header {
