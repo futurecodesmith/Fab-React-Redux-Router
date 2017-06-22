@@ -1,8 +1,6 @@
 
 export default (state = [], payload) => {
   switch(payload.type) {
-    case 'populate':
-      return [...state, payload.item];
     case 'add':
       let moved = [payload.item]
       for (let i = 0; i < state.length; i += 1){
