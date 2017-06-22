@@ -1,3 +1,3 @@
 
-## FabFitFun Web Site Using Redux, React and React-Router
+## FabFitFun Demo Using Redux, React and React-Router
 
