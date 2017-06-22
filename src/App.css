@@ -62,6 +62,9 @@ nav li {
   padding-right: 1vw;
 }
 
+.justify {
+  text-align: justify;
+}
 /*--------------------------------------------------------*/
 
 .header {
