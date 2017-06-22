@@ -4,19 +4,14 @@ import * as ShelfActions from '../actions/shelfAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Example from './Example';
 
 const Home = (props) => {
 
-  function startFade(e){
-    // console.log(e.target)
-    e.target.setAttribute('class', 'scale-up');
-  }
 
   const thumbnails = props.shelf.map((item, i) => {
     return (
       <li
-        onClick={(e) => {props.shelfActions.addToCart(item); startFade(e)}}
+        onClick={(e) => {props.shelfActions.addToCart(item)}}
         key={i} className="col-xs-3 col-sm-2 col-md-1 list-item-small grow">
         <img
           className="img img-responsive"
