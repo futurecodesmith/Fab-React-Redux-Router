@@ -2,7 +2,7 @@
 export default (state = [], payload) => {
   switch(payload.type) {
     case 'add':
-      return [...state, payload.item];
+      return [payload.item, ...state.slice(1)];
     case 'remove':
       console.log('STATE', state);
       console.log('PAYLOAD', payload);

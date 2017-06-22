@@ -5,16 +5,15 @@ import * as ShelfActions from '../actions/shelfAction';
 import * as TopThreeActions from '../actions/topThreeAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Logo from '../images/fab-logo.png';
 
 
 const Home = (props) => {
-  const workers = props.shelfActions.populate().item;
+  // const workers = props.shelfActions.populate().item;
 
-  const thumbnails = workers.map((item, i) => {
+  const thumbnails = props.cart.map((item, i) => {
     return (
       <li
-        onClick={props.cartActions.addToCart.bind(this, item)}
+        onClick={props.shelfActions.addToCart.bind(this, item)}
         key={i} className="col-sm-1 list-item-small">
         <img
           className="img img-responsive"
@@ -24,12 +23,11 @@ const Home = (props) => {
     )
   })
 
-  const top = props.topThreeActions.populate().item;
+  // const top = props.topThreeActions.populate().item;
 
-  const topThree = top.map((item, i) => {
+  const topThree = props.cart.slice(0,3).map((item, i) => {
     return (
       <li
-        onClick={props.cartActions.addToCart.bind(this, item)}
         key={i} className="col-sm-4 list-item-big">
         <div className="container-thirds">
           <div className="col-sm-6">
@@ -66,7 +64,11 @@ const Home = (props) => {
   )
 }
 
-
+function mapStateToProps(state, prop) {
+  return {
+    cart: state.shelf
+  }
+}
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -76,4 +78,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(null, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

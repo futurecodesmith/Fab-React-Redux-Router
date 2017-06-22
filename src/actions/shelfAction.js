@@ -1,3 +1,9 @@
+export const addToCart = (item) => {
+  return {
+    type: 'add',
+    item
+  };
+}
 
 export const populate = () => {
 
