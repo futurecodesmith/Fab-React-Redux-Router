@@ -41,6 +41,33 @@ nav li {
 }
 
 /*--------------------------------------------------------*/
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.inline {
+  display: inline;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.padding-right-1 {
+  padding-right: 1vw;
+}
+
+/*--------------------------------------------------------*/
+
+.header {
+  margin-top: 0;
+}
+
 .list-top {
   text-align: center;
   list-style-type: none;
