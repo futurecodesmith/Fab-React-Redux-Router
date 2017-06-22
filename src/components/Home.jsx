@@ -7,19 +7,20 @@ import { connect } from 'react-redux';
 
 const Home = (props) => {
 
-  function startFade(){
+  function startFade(e){
+    console.log(e.target.parentNode)
     let li = document.querySelectorAll('li');
     li.forEach(l => {
-      l.classList.remove('fade-in');
-      l.classList.className ='fade-in';
+      // l.classList.remove('fade-in');
+      l.classList.className = 'move';
     })
   }
 
   const thumbnails = props.shelf.map((item, i) => {
     return (
       <li
-        onClick={(e) => {props.shelfActions.addToCart(item); startFade()}}
-        key={i} className="col-xs-3 col-sm-2 col-md-1 list-item-small fade-in is-paused">
+        onClick={(e) => {props.shelfActions.addToCart(item); startFade(e)}}
+        key={i} className="col-xs-3 col-sm-2 col-md-1 list-item-small fade-in">
         <img
           className="img img-responsive"
           src={item.src}
