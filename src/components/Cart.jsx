@@ -4,6 +4,7 @@ import * as CartActions from '../actions/cartAction';
 import * as ShelfActions from '../actions/shelfAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import Form from './Form';
 
 const Cart = (props) => {
 
@@ -27,13 +28,20 @@ const Cart = (props) => {
   return (
     <div>
       <Navbar />
-      <div className="cart">
-        <h1 className="header">Cart Items</h1>
-        <ol>
-          {cartItems}
-        </ol>
-        <div className="total-price">
-          <h3>Total Price: <b>${totalPrice}</b></h3>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-1"></div>
+          <div className="col-sm-5">
+            <h1 className="header">Cart Items</h1>
+            <ol>
+              {cartItems}
+            </ol>
+            <div className="total-price">
+              <h3>Total Price: <b>${totalPrice}</b></h3>
+            </div>
+          </div>
+          <Form totalPrice={totalPrice}/>
+          <div className="col-sm-1"></div>
         </div>
       </div>
     </div>

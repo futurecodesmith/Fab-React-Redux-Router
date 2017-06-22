@@ -1,44 +1,151 @@
 
 export const populate = () => {
 
-
   return {
     type: 'populate',
     item: [
       {
         src: "https://unsplash.it/300?image=14",
-        title: "Blissful Ignorance",
-        price: "49",
+        name: "Blissful Ignorance",
+        description: "49",
         id: Math.floor(Math.random() * 1000)
       },
       {
         src: "https://unsplash.it/300?image=18",
-        title: "Mountaintop Experience",
-        price: "39",
+        name: "Mountaintop Experience",
+        description: "39",
         id: Math.floor(Math.random() * 1000)
       },
       {
         src: "https://unsplash.it/300?image=10",
-        title: "Delight and Cherish",
-        price: "49",
+        name: "Delight and Cherish",
+        description: "49",
         id: Math.floor(Math.random() * 1000)
       },
       {
         src: "https://unsplash.it/300?image=20",
-        title: "Magical One",
-        price: "29",
+        name: "Magical One",
+        description: "29",
         id: Math.floor(Math.random() * 1000)
       },
       {
         src: "https://unsplash.it/300?image=21",
-        title: "Amazon Rainfall",
-        price: "39",
+        name: "Amazon Rainfall",
+        description: "39",
         id: Math.floor(Math.random() * 1000)
       },
       {
         src: "https://unsplash.it/300?image=32",
-        title: "Valley Below",
-        price: "59",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=34",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=44",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=42",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=45",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=55",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=52",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=14",
+        name: "Blissful Ignorance",
+        description: "49",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=18",
+        name: "Mountaintop Experience",
+        description: "39",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=10",
+        name: "Delight and Cherish",
+        description: "49",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=20",
+        name: "Magical One",
+        description: "29",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=21",
+        name: "Amazon Rainfall",
+        description: "39",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=32",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=34",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=44",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=42",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=45",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=55",
+        name: "Valley Below",
+        description: "59",
+        id: Math.floor(Math.random() * 1000)
+      },
+      {
+        src: "https://unsplash.it/300?image=52",
+        name: "Valley Below",
+        description: "59",
         id: Math.floor(Math.random() * 1000)
       },
     ]

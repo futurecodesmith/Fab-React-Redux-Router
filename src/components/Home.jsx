@@ -1,24 +1,38 @@
 import React from 'react';
-import Navbar from './Navbar';
 import * as CartActions from '../actions/cartAction';
 import * as ShelfActions from '../actions/shelfAction';
+import * as TopThreeActions from '../actions/topThreeAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 
 const Home = (props) => {
-  const items = props.shelfActions.populate().item;
+  const workers = props.shelfActions.populate().item;
 
-  const shelfItems = items.map((item, i) => {
+  const thumbnails = workers.map((item, i) => {
     return (
       <li
         onClick={props.cartActions.addToCart.bind(this, item)}
-        key={i} className="col-sm-4 list-item">
+        key={i} className="col-sm-1 list-item">
         <img
-          className="img-responsive"
+          className="img img-responsive"
           src={item.src}
-          alt={item.title} />
-        <span className="list-item-desc"><b>{item.title}</b>  ${item.price}</span>
+          alt={item.name} />
+      </li>
+    )
+  })
+
+  const top = props.topThreeActions.populate().item;
+
+  const topThree = top.map((item, i) => {
+    return (
+      <li
+        onClick={props.cartActions.addToCart.bind(this, item)}
+        key={i} className="col-sm-4 list-item-big">
+        <img
+          className="img img-responsive"
+          src={item.src}
+          alt={item.name} />
       </li>
     )
   })
@@ -26,9 +40,13 @@ const Home = (props) => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <Navbar />
+        <ul className="list-top">
+          {topThree}
+        </ul>
+      </div>
+      <div className="row">
         <ul className="list">
-          {shelfItems}
+          {thumbnails}
         </ul>
       </div>
     </div>
@@ -40,7 +58,8 @@ const Home = (props) => {
 function mapDispatchToProps(dispatch) {
   return {
     cartActions: bindActionCreators(CartActions, dispatch),
-    shelfActions: bindActionCreators(ShelfActions, dispatch)
+    shelfActions: bindActionCreators(ShelfActions, dispatch),
+    topThreeActions: bindActionCreators(TopThreeActions, dispatch)
   }
 }
 

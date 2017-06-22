@@ -4,3 +4,16 @@ body {
   font-family: Helvetica, sans-serif;
   box-style: border-box;
 }
+
+.list-item img {
+  height: 75px;
+}
+
+.list-item-big img {
+  height: 50%;
+}
+
+.list-top {
+  text-align: center;
+  list-style-type: none;
+}
