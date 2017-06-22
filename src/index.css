@@ -2,18 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
-  box-style: border-box;
+  box-sizing: border-box;
+  background-color: #FAFAFA;
 }
 
-.list-item img {
-  height: 75px;
-}
 
-.list-item-big img {
-  height: 50%;
-}
-
-.list-top {
-  text-align: center;
-  list-style-type: none;
-}

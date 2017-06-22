@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './Navbar';
 import * as CartActions from '../actions/cartAction';
 import * as ShelfActions from '../actions/shelfAction';
 import * as TopThreeActions from '../actions/topThreeAction';
@@ -13,7 +14,7 @@ const Home = (props) => {
     return (
       <li
         onClick={props.cartActions.addToCart.bind(this, item)}
-        key={i} className="col-sm-1 list-item">
+        key={i} className="col-sm-1 list-item-small">
         <img
           className="img img-responsive"
           src={item.src}
@@ -29,25 +30,36 @@ const Home = (props) => {
       <li
         onClick={props.cartActions.addToCart.bind(this, item)}
         key={i} className="col-sm-4 list-item-big">
-        <img
-          className="img img-responsive"
-          src={item.src}
-          alt={item.name} />
+        <div className="container-thirds">
+          <div className="col-sm-6">
+            <img
+              className="img img-responsive"
+              src={item.src}
+              alt={item.name} />
+          </div>
+          <div className="col-sm-6">
+            <h3>{item.name}</h3>
+            <p>{item.description}</p>
+          </div>
+        </div>
       </li>
     )
   })
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <ul className="list-top">
-          {topThree}
-        </ul>
-      </div>
-      <div className="row">
-        <ul className="list">
-          {thumbnails}
-        </ul>
+    <div>
+      <Navbar />
+      <div className="container-fluid top">
+        <div className="row">
+          <ul className="list-top">
+            {topThree}
+          </ul>
+        </div>
+        <div className="row">
+          <ul className="list-bottom">
+            {thumbnails}
+          </ul>
+        </div>
       </div>
     </div>
   )
