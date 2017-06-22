@@ -34,7 +34,7 @@ const Home = (props) => {
               src={item.src}
               alt={item.name} />
             <h3 className="left-align header">{item.name}</h3>
-            <p className="left-align">{item.description}</p>
+            <p className="justify">{item.description}</p>
           </div>
         </div>
       </li>
