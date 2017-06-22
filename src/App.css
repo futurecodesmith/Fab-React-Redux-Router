@@ -1,7 +1,7 @@
 /*-------------NAVBAR----------------*/
 nav {
   height: 100px;
-  background-color: lightblue;
+  background-color: white;
   box-shadow: 2px 2px 2px 2px rgba(211, 211, 211, 0.8);
 }
 
@@ -16,11 +16,29 @@ nav li {
   padding-left: 20px;
 }
 
-.link {
-  font-size: 1.5em;
-  color: white;
+.logo {
+  height: 70px;
+  width: auto;
 }
 
+.link {
+  font-size: 1.5em;
+  color: black;
+  text-transform: uppercase;
+}
+
+.link-right {
+  margin-left: 70px;
+}
+
+.link-left {
+  margin-left: 60px;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: #F47474;
+}
 
 /*--------------------------------------------------------*/
 .list-top {

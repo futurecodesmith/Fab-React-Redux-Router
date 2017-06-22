@@ -5,6 +5,7 @@ import * as ShelfActions from '../actions/shelfAction';
 import * as TopThreeActions from '../actions/topThreeAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import Logo from '../images/fab-logo.png';
 
 
 const Home = (props) => {
