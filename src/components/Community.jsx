@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 
 const Community = () => (
-  <div className="container-fluid">
+  <div className="container-fluid fade-in">
     <div className="row">
       <Navbar />
       <div className="col-sm-12">
