@@ -8,7 +8,6 @@ import { connect } from 'react-redux';
 
 
 const Home = (props) => {
-  // const workers = props.shelfActions.populate().item;
 
   const thumbnails = props.cart.map((item, i) => {
     return (
@@ -23,22 +22,19 @@ const Home = (props) => {
     )
   })
 
-  // const top = props.topThreeActions.populate().item;
 
   const topThree = props.cart.slice(0,3).map((item, i) => {
     return (
       <li
         key={i} className="col-sm-4 list-item-big">
         <div className="container-thirds">
-          <div className="col-sm-6">
+          <div className="col-sm-12">
             <img
-              className="img img-responsive"
+              className="inline float-left img-responsive padding-right-1"
               src={item.src}
               alt={item.name} />
-          </div>
-          <div className="col-sm-6">
-            <h3>{item.name}</h3>
-            <p>{item.description}</p>
+            <h3 className="left-align header">{item.name}</h3>
+            <p className="left-align">{item.description}</p>
           </div>
         </div>
       </li>
