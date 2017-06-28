@@ -9,9 +9,6 @@ import Store from './store';
 import { Provider } from 'react-redux';
 
 
-
-
-
 const storeInstance = Store(State);
 
 ReactDOM.render(
