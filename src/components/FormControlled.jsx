@@ -11,7 +11,8 @@ class FormControlled extends Component {
   }
   handleSubmit(e){
     e.preventDefault();
-    console.log(this.state.name, this.state.password);
+    // console.log(this.state.name, this.state.password);
+    this.props.log(this.state.name);
     this.setState({
       name: '',
       password: '',
