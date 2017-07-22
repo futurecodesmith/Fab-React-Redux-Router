@@ -1,5 +1,9 @@
 module.exports = {
-    shelf: [
+  login: {
+    name: '',
+    password: ''
+  }, 
+  shelf: [
       {
         src: "https://unsplash.it/300?image=14",
         name: "Blissful Ignorance",

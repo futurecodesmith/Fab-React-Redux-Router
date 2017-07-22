@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
+
 class FormControlled extends Component {
   constructor(props) {
-  super(props)
-  this.state = {
-    name: '',
-    password: ''
+    super(props)
+    this.state = {
+      name: '',
+      password: ''
+    }
   }
 
-  }
   handleSubmit(e){
     e.preventDefault();
     // console.log(this.state.name, this.state.password);
@@ -39,4 +40,4 @@ class FormControlled extends Component {
 
 }
 
-  export default FormControlled;
+export default FormControlled;
