@@ -59,6 +59,10 @@ nav li {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 .center {
   text-align: center;
 }
@@ -82,6 +86,8 @@ nav li {
 .columns-2 {
   column-count: 1;
 }
+
+
 /*--------------------------------------------------------*/
 
 .top {

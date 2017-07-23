@@ -1,17 +1,14 @@
 
-export default (state = [], payload) => {
+export default (state = {}, payload) => {
+  let newState;
   switch(payload.type) {
     case 'HANDLE_SUBMIT':
-     console.log('REDUCER', state.name, state.password);
-     payload.e.preventDefault();
-     state.name = '';
-     state.password = '';
-     return state;
+      return {...state, name: payload.name, password: payload.password}
     
     case 'HANDLE_CHANGE':
-      state[payload.e.target.name] = payload.e.target.value;
+      newState = {...state, [payload.e.target.name] : payload.e.target.value}
       console.log('ON CHANGE', state.name, state.password);
-      return state;
+      return newState;
 
     default: 
       return state;

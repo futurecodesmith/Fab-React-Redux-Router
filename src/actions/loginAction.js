@@ -1,7 +1,8 @@
-export const handleSubmit = (e) => {
+export const handleSubmit = (name, password) => {
   return {
     type: 'HANDLE_SUBMIT',
-    e
+    name,
+    password
   }
 }
 
