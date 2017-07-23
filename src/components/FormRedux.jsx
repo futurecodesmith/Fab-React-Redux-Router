@@ -17,19 +17,19 @@ class FormRedux extends Component {
     e.preventDefault();
     if (this.state.name === '' || this.state.password === '') {
       this.setState(
-        Object.assign({}, this.state, {error: true})
+        {error: true}
       )
     } else {
       this.setState(
-        Object.assign({}, this.state, {error: false})
+        {error: false}
       )
     }
-    console.log(this.state.name, this.state.password, this.state.error);
+
     this.setState({
       name: '',
       password: ''
-    });
-    console.log('AFTER', this.state.name, this.state.password, this.state.error);
+    });    
+
     this.props.handleSubmit(this.state.name, this.state.password);
   }
 
@@ -61,7 +61,6 @@ function mapStateToProps(state, prop) {
   return {
     name: state.name,
     password: state.password,
-    error: state.error
   }
 }
 
