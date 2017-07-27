@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { handleSubmit, handleChange } from '../actions/loginAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router';
+
 
 class FormRedux extends Component {
   constructor(props) {
@@ -10,10 +12,11 @@ class FormRedux extends Component {
       name: '',
       password: '',
       error: false,
+      fireRedirect: false,
     }
   }
 
-    handleSubmit(e){
+  handleSubmit(e){
     e.preventDefault();
     if (this.state.name === '' || this.state.password === '') {
       this.setState(
@@ -24,13 +27,14 @@ class FormRedux extends Component {
         {error: false}
       )
     }
-
     this.setState({
       name: '',
-      password: ''
+      password: '',
+      fireRedirect: true,
     });    
 
     this.props.handleSubmit(this.state.name, this.state.password);
+
   }
 
   handleChange(e) {
@@ -51,6 +55,9 @@ class FormRedux extends Component {
         <div className="">
           <h3 className={this.state.error ? 'block': 'hidden'}  >Please Input a Username</h3>
         </div>
+        {this.state.fireRedirect && (
+          <Redirect to={'/community'}/>
+        )}
       </div>
     )
   }
